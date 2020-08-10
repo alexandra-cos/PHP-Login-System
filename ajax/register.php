@@ -35,7 +35,7 @@
 
       $_SESSION['user_id'] = (int) $user_id;
 
-      $return['redirect'] = '/dashboard.php?message=welcome';
+      $return['redirect'] = 'php_login_system/dashboard.php?message=welcome';
       $return['is_logged_in'] = true;
     }
 
@@ -43,8 +43,8 @@
 
     //Return the proper information back to JavaScript to redirect us
 
-    $return['redirect'] = '/dashboard.php'; //not sure
-    $return['name'] = "Alex Costache";
+    //$return['redirect'] = 'php_login_system/dashboard.php'; //not sure
+    //$return['name'] = "Alex Costache";
 
     echo json_encode($return, JSON_PRETTY_PRINT); exit;
   } else {

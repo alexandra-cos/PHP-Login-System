@@ -6,7 +6,7 @@
 
   class Filter {
 
-  	/**
+  	/*
   	 * @param	string	$string		String to filter before putting inside InnoDB
   	 *  @return            			Filters and returns a valid string to put into the Database.
   	 *  @note				If the $html arg is false, new lines (\n) will replaced with __BR__ and re-converted to \r\n afterwards.
@@ -22,7 +22,7 @@
   		return $string;
   	}
 
-  	/**
+  	/*
   	 *  @param	string	$email		Email to filter before putting inside InnoDB
   	 *  @return            			Filters and returns a valid or invalid email address
   	 */
@@ -30,7 +30,7 @@
   		return filter_var( $email , FILTER_SANITIZE_EMAIL);
   	}
 
-  	/**
+  	/*
   	 *  @param	string	$url		String to filter before putting inside InnoDB
   	 *  @return            			Filters and returns a valid or invalid URL
   	 */
@@ -38,7 +38,7 @@
   		return filter_var( $url , FILTER_SANITIZE_URL);
   	}
 
-  	/**
+  	/*
   	 *  @param	int		$integer	The string to filter and turn into an integer
   	 *  @return	int					Returns an integer after being filtered.
   	 */
