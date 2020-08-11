@@ -30,7 +30,7 @@
     <div class="uk-section uk-container">
       <h2>Dashboard</h2>
       <p>Hello, <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?>.</p>
-      <p><a href='/php_login_system/logout.php'>Logout</p>
+      <p><a href='/php_login_system/logout.php'>Logout</a></p>
     </div>
 
     <?php require_once "inc/footer.php" ?>
