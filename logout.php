@@ -5,6 +5,6 @@
   setcookie(session_name(), '', 0, '/');
   session_regenerate_id(true);
 
-  header("Location: php_login_system/index.php");
+  header("Location: /php_login_system/index.php");
 
 ?>

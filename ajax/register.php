@@ -12,12 +12,10 @@
     $return = [];
 
     $email = Filter::String($_POST['email']);
-    //Make sure user does not exist.
-    $findUser = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
-    $findUser->bindParam('email', $email, PDO::PARAM_STR);
-    $findUser->execute();
 
-    if($findUser->rowCount() == 1){
+    $user_found = User::Find($email);
+
+    if($user_found){
       //user exists
       //we can also check to see if they are able to log in
       $return['error'] = "You already have an account.";
